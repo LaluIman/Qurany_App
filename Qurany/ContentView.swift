@@ -20,36 +20,34 @@ struct ContentView: View {
                     return searchLowercased.isEmpty ? true : suratNamaLowercased.contains(searchLowercased)
                 }) { surat in
                     NavigationLink(destination: DetailView(surat: surat, viewModel: viewModel)) {
-                        HStack {
-                            ZStack {
-                                Image("qu")
-                                    .resizable()
-                                    .frame(width: 60, height: 60)
-                                Text("\(surat.id)")
-                                    .font(.title2).bold()
-                                    .foregroundStyle(.purple)
-                            }
-                            
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .trailing) {
-                                Text(surat.nama)
-                                    .font(.custom("Amiri-Regular", size: 35))
-                                    .foregroundColor(.purple)
-                                    .padding(.bottom,5)
-                                Text(surat.namaLatin)
-                                    .font(.headline).bold()
-                                    .foregroundColor(.black)
-                                Text(surat.arti)
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
+                        VStack {
+                            HStack {
+                                ZStack {
+                                    Image("qu")
+                                        .resizable()
+                                        .frame(width: 60, height: 60)
+                                    Text("\(surat.id)")
+                                        .font(.title2).bold()
+                                }
+                                Spacer()
+                                VStack(alignment: .trailing) {
+                                    Text(surat.nama)
+                                        .font(.custom("Amiri-Regular", size: 35))
+                                        .foregroundColor(.purple)
+                                        .padding(.bottom,5)
+                                    Text(surat.namaLatin)
+                                        .font(.headline).bold()
+                                        .foregroundColor(.black)
+                                    Text(surat.arti)
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                    
+                                }
                             }
                         }
-                        
-                        
                     }
                 }
+                .scrollIndicators(.hidden)
                 .listStyle(.plain)
                 .onAppear {
                     viewModel.getSurats()
@@ -60,12 +58,13 @@ struct ContentView: View {
                 ,
                 trailing:
                 HStack {
-                    TextField("Cari Surah", text: $searchTerm, onCommit: {
-                                    viewModel.getSurats(searchTerm: searchTerm.lowercased())
-                                })
-                            .padding(.vertical, 8)
-                Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.gray)
+                    TextField("Cari Surah", text: $searchTerm, onCommit: 
+                        {
+                            viewModel.getSurats(searchTerm: searchTerm.lowercased())
+                        })
+                        .padding(.vertical, 8)
+                    Image(systemName: "magnifyingglass")
+                        .foregroundStyle(.gray)
                 }
             )
                 
