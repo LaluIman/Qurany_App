@@ -13,6 +13,11 @@ struct DetailView: View {
     
     var body: some View {
         List {
+            Image("bis")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 370, height: 190)
+                .padding(.bottom)
             ForEach(viewModel.ayats) { ayat in
                 HStack {
                     VStack(alignment: .trailing, spacing: 15) {
