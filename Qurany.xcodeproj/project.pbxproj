@@ -52,7 +52,7 @@
 		819D974D2C1937B000C9466B /* QuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranViewModel.swift; sourceTree = "<group>"; };
 		819D97512C19383900C9466B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		819D97532C193F7700C9466B /* Surat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surat.swift; sourceTree = "<group>"; };
-		819D97552C19485800C9466B /* Amiri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Regular.ttf"; sourceTree = "<group>"; };
+		819D97552C19485800C9466B /* Amiri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Amiri.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				819D971D2C19371C00C9466B /* QuranyApp.swift */,
-				819D97552C19485800C9466B /* Amiri-Regular.ttf */,
+				819D97552C19485800C9466B /* Amiri.ttf */,
 				819D97512C19383900C9466B /* DetailView.swift */,
 				819D971F2C19371C00C9466B /* ContentView.swift */,
 				819D97502C1937C600C9466B /* ViewModel */,

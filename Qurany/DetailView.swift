@@ -13,11 +13,16 @@ struct DetailView: View {
     
     var body: some View {
         List {
-            Image("bis")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 370, height: 190)
+            ZStack {
+                Image("bis")
+                    .resizable()
+                    .frame(width: 370, height: 300)
                 .padding(.bottom)
+                Text(surat.namaLatin)
+                    .font(.largeTitle).bold()
+                    .foregroundStyle(.white)
+                    .frame(height: 200, alignment: .top)
+            }
             ForEach(viewModel.ayats) { ayat in
                 HStack {
                     VStack(alignment: .trailing, spacing: 15) {
