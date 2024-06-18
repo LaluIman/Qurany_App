@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81058CDA2C216E2A000B3363 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81058CD92C216E2A000B3363 /* SettingView.swift */; };
+		81058CDC2C216EF0000B3363 /* FontSizeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81058CDB2C216EF0000B3363 /* FontSizeview.swift */; };
+		81058CDE2C216F00000B3363 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81058CDD2C216F00000B3363 /* CreditsView.swift */; };
 		819D971E2C19371C00C9466B /* QuranyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D971D2C19371C00C9466B /* QuranyApp.swift */; };
 		819D97202C19371C00C9466B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D971F2C19371C00C9466B /* ContentView.swift */; };
 		819D97222C19371E00C9466B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819D97212C19371E00C9466B /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81058CD92C216E2A000B3363 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		81058CDB2C216EF0000B3363 /* FontSizeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeview.swift; sourceTree = "<group>"; };
+		81058CDD2C216F00000B3363 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		819D971A2C19371C00C9466B /* Qurany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qurany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819D971D2C19371C00C9466B /* QuranyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranyApp.swift; sourceTree = "<group>"; };
 		819D971F2C19371C00C9466B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81058CD82C216E12000B3363 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				819D971F2C19371C00C9466B /* ContentView.swift */,
+				819D97512C19383900C9466B /* DetailView.swift */,
+				81058CD92C216E2A000B3363 /* SettingView.swift */,
+				81058CDD2C216F00000B3363 /* CreditsView.swift */,
+				81058CDB2C216EF0000B3363 /* FontSizeview.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		819D97112C19371C00C9466B = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +123,7 @@
 			children = (
 				819D971D2C19371C00C9466B /* QuranyApp.swift */,
 				819D97552C19485800C9466B /* Amiri.ttf */,
-				819D97512C19383900C9466B /* DetailView.swift */,
-				819D971F2C19371C00C9466B /* ContentView.swift */,
+				81058CD82C216E12000B3363 /* Views */,
 				819D97502C1937C600C9466B /* ViewModel */,
 				819D974F2C1937B800C9466B /* Model */,
 				819D97212C19371E00C9466B /* Assets.xcassets */,
@@ -289,8 +306,11 @@
 			files = (
 				819D97202C19371C00C9466B /* ContentView.swift in Sources */,
 				819D974E2C1937B000C9466B /* QuranViewModel.swift in Sources */,
+				81058CDC2C216EF0000B3363 /* FontSizeview.swift in Sources */,
 				819D97522C19383900C9466B /* DetailView.swift in Sources */,
+				81058CDA2C216E2A000B3363 /* SettingView.swift in Sources */,
 				819D971E2C19371C00C9466B /* QuranyApp.swift in Sources */,
+				81058CDE2C216F00000B3363 /* CreditsView.swift in Sources */,
 				819D974C2C19379800C9466B /* QuranService.swift in Sources */,
 				819D97542C193F7700C9466B /* Surat.swift in Sources */,
 			);

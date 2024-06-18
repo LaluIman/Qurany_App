@@ -10,21 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = QuranViewModel()
     @State private var searchTerm: String = ""
+    
+    //settingfont
+    
 
     var body: some View {
         NavigationView{
            List{
                VStack {
-                   HStack {
-                       TextField("Cari Surah", text: $searchTerm, onCommit:
-                           {
-                               viewModel.getSurats(searchTerm: searchTerm.lowercased())
-                           })
-                            //.textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.vertical, 8)
-                       Image(systemName: "magnifyingglass")
-                           .foregroundStyle(.gray)
-                   }
                    Image("qq")
                        .resizable()
                        .scaledToFit()
@@ -65,10 +58,31 @@ struct ContentView: View {
                        }
                         .scrollIndicators(.hidden)
                         .listStyle(.plain)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                NavigationLink(destination: SettingView()) {
+                                    Image(systemName: "gear")
+                                        .foregroundStyle(.purple)
+                                }
+                            }
+                            ToolbarItem{
+                                    HStack {
+                                        TextField("Cari Surah", text: $searchTerm, onCommit:
+                                            {
+                                                viewModel.getSurats(searchTerm: searchTerm.lowercased())
+                                            })
+                                             
+                                             .padding(.vertical, 8)
+                                        Image(systemName: "magnifyingglass")
+                                            .foregroundStyle(.gray)
+                                    }
+                            }
+                        }
                    }
                    .onAppear {
                        viewModel.getSurats()
                    }
+                   
                 }
             }
     
