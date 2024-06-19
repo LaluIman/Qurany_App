@@ -11,6 +11,10 @@ struct DetailView: View {
     var surat: Surat
     @ObservedObject var viewModel: QuranViewModel
     @Environment(\.presentationMode) var presentationMode
+    
+       @AppStorage("arabicFontSize") private var arabicFontSize: Double = 30
+       @AppStorage("latinFontSize") private var latinFontSize: Double = 18
+       @AppStorage("translationFontSize") private var translationFontSize: Double = 15
 
     
     var body: some View {
@@ -30,19 +34,19 @@ struct DetailView: View {
                     HStack {
                         VStack(alignment: .trailing, spacing: 15) {
                             Text(ayat.ar)
-                                .font(.custom("Amiri", size: 30))
+                                .font(.custom("Amiri-Regular", size: CGFloat(arabicFontSize)))
                                 .lineSpacing(15)
                                 .foregroundColor(.purple)
                                 .multilineTextAlignment(.trailing)
                             
                             Text(ayat.tr)
-                                .font(.headline)
+                                .font(.system(size: CGFloat(latinFontSize)))
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.trailing)
                             
                             
                             Text(ayat.idn)
-                                .font(.body)
+                                .font(.system(size: CGFloat(translationFontSize)))
                                 .foregroundColor(.gray)
                                 .multilineTextAlignment(.trailing)
                             

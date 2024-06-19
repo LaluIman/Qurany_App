@@ -11,9 +11,6 @@ struct ContentView: View {
     @StateObject private var viewModel = QuranViewModel()
     @State private var searchTerm: String = ""
     
-    //settingfont
-    
-
     var body: some View {
         NavigationView{
            List{

@@ -23,9 +23,6 @@ struct FontSizeView: View {
                     .font(.subheadline)
                 Slider(value: $arabicFontSize, in: 10...50, step: 1)
                     .padding(.horizontal)
-                Text("بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ")
-                    .font(.custom("Amiri-Regular", size: CGFloat(arabicFontSize)))
-                    .padding(.bottom, 20)
             }
             
             Group {
@@ -33,9 +30,6 @@ struct FontSizeView: View {
                     .font(.subheadline)
                 Slider(value: $latinFontSize, in: 10...30, step: 1)
                     .padding(.horizontal)
-                Text("Sample Latin Text")
-                    .font(.system(size: CGFloat(latinFontSize)))
-                    .padding(.bottom, 20)
             }
             
             Group {
@@ -43,10 +37,26 @@ struct FontSizeView: View {
                     .font(.subheadline)
                 Slider(value: $translationFontSize, in: 10...20, step: 1)
                     .padding(.horizontal)
+            }
+            
+            Divider()
+            
+            VStack(alignment: .trailing){
+                Text("بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ")
+                    .font(.custom("Amiri-Regular", size: CGFloat(arabicFontSize)))
+                    .foregroundStyle(.purple)
+                    .padding(.bottom, 20)
+                
+                Text("Sample Latin Text")
+                    .font(.system(size: CGFloat(latinFontSize)))
+                    .padding(.bottom, 20)
+                
                 Text("Sample Translation Text")
                     .font(.system(size: CGFloat(translationFontSize)))
                     .padding(.bottom, 20)
             }
+            
+            Divider()
             
             Spacer()
         }
