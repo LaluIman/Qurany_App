@@ -23,25 +23,30 @@ struct DetailView: View {
                 ZStack {
                     Image("bis")
                         .resizable()
-                        .frame(width: 370, height: 300)
+                        .frame(height: 300)
                         .padding(.bottom)
-                    Text(surat.namaLatin)
-                        .font(.largeTitle).bold()
-                        .foregroundStyle(.white)
-                        .frame(height: 200, alignment: .top)
+                    VStack{
+                        Text(surat.namaLatin)
+                            .font(.largeTitle).bold()
+                        Text(surat.arti)
+                            .font(.subheadline)
+                    }
+                    .frame(height: 230, alignment: .top)
+                    .foregroundStyle(.white)
                 }
                 ForEach(viewModel.ayats) { ayat in
                     HStack {
                         VStack(alignment: .trailing, spacing: 15) {
-                            Text(ayat.ar)
-                                .font(.custom("Amiri-Regular", size: CGFloat(arabicFontSize)))
-                                .lineSpacing(15)
-                                .foregroundColor(.purple)
+                            HStack {
+                                Text(ayat.ar)
+                                    .font(.custom("Amiri-Regular", size: CGFloat(arabicFontSize)))
+                                    .lineSpacing(15)
+                                    .foregroundColor(.purple)
                                 .multilineTextAlignment(.trailing)
+                            }
                             
                             Text(ayat.tr)
                                 .font(.system(size: CGFloat(latinFontSize)))
-                                .foregroundColor(.black)
                                 .multilineTextAlignment(.trailing)
                             
                             
@@ -52,7 +57,7 @@ struct DetailView: View {
                             
                             Divider()
                         }
-                        .frame(width: 370,alignment: .trailing)
+                        .frame(maxWidth: .infinity ,alignment: .trailing)
                     }
                     .listRowSeparator(.hidden)
                     

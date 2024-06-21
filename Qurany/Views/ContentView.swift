@@ -18,7 +18,7 @@ struct ContentView: View {
                    Image("qq")
                        .resizable()
                        .scaledToFit()
-                       .frame(width: 370, height: 190)
+                       .frame(height: 190)
                }
                ForEach(viewModel.surats.filter { surat in
                                let searchLowercased = searchTerm.lowercased()
@@ -42,7 +42,6 @@ struct ContentView: View {
                                                .padding(.bottom, 5)
                                            Text(surat.namaLatin)
                                                .font(.headline).bold()
-                                               .foregroundColor(.black)
                                            Text(surat.arti)
                                                .font(.subheadline)
                                                .foregroundColor(.gray)
